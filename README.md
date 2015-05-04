@@ -1,2 +1,5 @@
-# Demo_ButtonImageTitleEdgeInsets
-用button的titleEdgeInsets和 imageEdgeInsets属性来实现button文字图片上下或者左右排列的demo
+# TEST_XMLCommon
+
+one是 用button的titleEdgeInsets和 imageEdgeInsets属性来实现button文字图片上下或者左右排列的demo
+
+two是 给view写的分类，用来给view添加pan手势并加入maskView和弹簧动画（用了pop）
