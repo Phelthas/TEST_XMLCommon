@@ -17,6 +17,8 @@
 		4340379F1AEF7D7D004D3308 /* TEST_ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434037961AEF7D7D004D3308 /* TEST_ButtonViewController.m */; };
 		434037A01AEF7D7D004D3308 /* TESTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434037991AEF7D7D004D3308 /* TESTViewController.m */; };
 		434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4340379A1AEF7D7D004D3308 /* Two.storyboard */; };
+		434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */; };
+		434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */; };
 		4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */; };
 		5D23B99F0A25EC4BFDDDEDEE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4401F4547744F9B1F501DCDA /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,9 @@
 		434037991AEF7D7D004D3308 /* TESTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTViewController.m; sourceTree = "<group>"; };
 		4340379A1AEF7D7D004D3308 /* Two.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Two.storyboard; sourceTree = "<group>"; };
 		434037A31AEF7DB8004D3308 /* TEST_Common-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEST_Common-prefix.pch"; sourceTree = "<group>"; };
+		434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TEST_Floating.storyboard; sourceTree = "<group>"; };
+		434ACC6C1B0CD1A300B747C2 /* TESTFloatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTFloatingViewController.h; sourceTree = "<group>"; };
+		434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingViewController.m; sourceTree = "<group>"; };
 		4357CCBE1AF0E65C00DE33AF /* UIView+XMLPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMLPanGesture.h"; sourceTree = "<group>"; };
 		4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMLPanGesture.m"; sourceTree = "<group>"; };
 		4401F4547744F9B1F501DCDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +108,7 @@
 				434037971AEF7D7D004D3308 /* Two */,
 				434037701AEF7D57004D3308 /* AppDelegate.h */,
 				434037711AEF7D57004D3308 /* AppDelegate.m */,
+				434ACC691B0CD15200B747C2 /* Three */,
 				434037791AEF7D57004D3308 /* Images.xcassets */,
 				4340377B1AEF7D57004D3308 /* LaunchScreen.xib */,
 				4340376C1AEF7D57004D3308 /* Supporting Files */,
@@ -158,6 +164,16 @@
 				4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */,
 			);
 			path = Two;
+			sourceTree = "<group>";
+		};
+		434ACC691B0CD15200B747C2 /* Three */ = {
+			isa = PBXGroup;
+			children = (
+				434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */,
+				434ACC6C1B0CD1A300B747C2 /* TESTFloatingViewController.h */,
+				434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */,
+			);
+			path = Three;
 			sourceTree = "<group>";
 		};
 		70F801563D7FB6B49435612F /* Pods */ = {
@@ -223,6 +239,7 @@
 		434037611AEF7D57004D3308 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TEST;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = luxiaoming;
 				TargetAttributes = {
@@ -259,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */,
 				4340377D1AEF7D57004D3308 /* LaunchScreen.xib in Resources */,
 				4340379D1AEF7D7D004D3308 /* OneImages.xcassets in Resources */,
 				434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */,
@@ -318,6 +336,7 @@
 				4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */,
 				434037721AEF7D57004D3308 /* AppDelegate.m in Sources */,
 				4340376F1AEF7D57004D3308 /* main.m in Sources */,
+				434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */,
 				434037A01AEF7D7D004D3308 /* TESTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
