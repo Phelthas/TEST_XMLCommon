@@ -20,6 +20,7 @@
 		434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */; };
 		434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */; };
 		4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */; };
+		43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */; };
 		5D23B99F0A25EC4BFDDDEDEE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4401F4547744F9B1F501DCDA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingViewController.m; sourceTree = "<group>"; };
 		4357CCBE1AF0E65C00DE33AF /* UIView+XMLPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMLPanGesture.h"; sourceTree = "<group>"; };
 		4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMLPanGesture.m"; sourceTree = "<group>"; };
+		43B342291B12BA0C00D6844E /* TESTFloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTFloatingView.h; sourceTree = "<group>"; };
+		43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingView.m; sourceTree = "<group>"; };
 		4401F4547744F9B1F501DCDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC98623D38E3A6FA37E7E78E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +175,8 @@
 				434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */,
 				434ACC6C1B0CD1A300B747C2 /* TESTFloatingViewController.h */,
 				434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */,
+				43B342291B12BA0C00D6844E /* TESTFloatingView.h */,
+				43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */,
 			);
 			path = Three;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4340379F1AEF7D7D004D3308 /* TEST_ButtonViewController.m in Sources */,
+				43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */,
 				4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */,
 				434037721AEF7D57004D3308 /* AppDelegate.m in Sources */,
 				4340376F1AEF7D57004D3308 /* main.m in Sources */,

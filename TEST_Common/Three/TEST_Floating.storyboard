@@ -72,7 +72,7 @@
                                     <outlet property="delegate" destination="tOi-aX-GIE" id="GS5-E0-E9W"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KO-Wd-048">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KO-Wd-048" customClass="TESTFloatingView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saber001" translatesAutoresizingMaskIntoConstraints="NO" id="o9Q-Ke-Pxh">
