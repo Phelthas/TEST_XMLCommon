@@ -59,6 +59,7 @@
 		434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingViewController.m; sourceTree = "<group>"; };
 		4357CCBE1AF0E65C00DE33AF /* UIView+XMLPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMLPanGesture.h"; sourceTree = "<group>"; };
 		4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMLPanGesture.m"; sourceTree = "<group>"; };
+		4369F2641B32AE07006037FF /* LXMUtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMUtilsMacro.h; sourceTree = "<group>"; };
 		43B342291B12BA0C00D6844E /* TESTFloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTFloatingView.h; sourceTree = "<group>"; };
 		43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingView.m; sourceTree = "<group>"; };
 		4401F4547744F9B1F501DCDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +108,7 @@
 		4340376B1AEF7D57004D3308 /* TEST_Common */ = {
 			isa = PBXGroup;
 			children = (
+				4369F2631B32ADD1006037FF /* Macro */,
 				434037921AEF7D7D004D3308 /* One */,
 				434037971AEF7D7D004D3308 /* Two */,
 				434037701AEF7D57004D3308 /* AppDelegate.h */,
@@ -179,6 +181,14 @@
 				43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */,
 			);
 			path = Three;
+			sourceTree = "<group>";
+		};
+		4369F2631B32ADD1006037FF /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				4369F2641B32AE07006037FF /* LXMUtilsMacro.h */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		70F801563D7FB6B49435612F /* Pods */ = {
@@ -463,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TEST_Common/TEST_Common-prefix.pch";
 				INFOPLIST_FILE = TEST_Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -476,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TEST_Common/TEST_Common-prefix.pch";
 				INFOPLIST_FILE = TEST_Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
