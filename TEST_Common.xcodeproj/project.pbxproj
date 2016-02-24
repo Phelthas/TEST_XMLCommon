@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431D84AD1C7DDDAC00965CB4 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431D84AB1C7DDDAC00965CB4 /* Test.storyboard */; };
+		431D84AE1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D84AC1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift */; };
 		4340376F1AEF7D57004D3308 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340376E1AEF7D57004D3308 /* main.m */; };
 		434037721AEF7D57004D3308 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 434037711AEF7D57004D3308 /* AppDelegate.m */; };
 		4340377A1AEF7D57004D3308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434037791AEF7D57004D3308 /* Images.xcassets */; };
 		4340377D1AEF7D57004D3308 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4340377B1AEF7D57004D3308 /* LaunchScreen.xib */; };
 		434037891AEF7D57004D3308 /* TEST_CommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 434037881AEF7D57004D3308 /* TEST_CommonTests.m */; };
-		4340379D1AEF7D7D004D3308 /* OneImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434037931AEF7D7D004D3308 /* OneImages.xcassets */; };
-		4340379E1AEF7D7D004D3308 /* TEST_Button.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434037941AEF7D7D004D3308 /* TEST_Button.storyboard */; };
-		4340379F1AEF7D7D004D3308 /* TEST_ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434037961AEF7D7D004D3308 /* TEST_ButtonViewController.m */; };
 		434037A01AEF7D7D004D3308 /* TESTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434037991AEF7D7D004D3308 /* TESTViewController.m */; };
 		434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4340379A1AEF7D7D004D3308 /* Two.storyboard */; };
 		434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */; };
@@ -36,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		2B4C5A2124D376639CF8D8AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		431D84AA1C7DDDAB00965CB4 /* TEST_Common-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEST_Common-Bridging-Header.h"; sourceTree = "<group>"; };
+		431D84AB1C7DDDAC00965CB4 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		431D84AC1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTakePhotoViewController.swift; sourceTree = "<group>"; };
 		434037691AEF7D57004D3308 /* TEST_Common.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST_Common.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4340376D1AEF7D57004D3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4340376E1AEF7D57004D3308 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,10 +48,6 @@
 		434037821AEF7D57004D3308 /* TEST_CommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEST_CommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434037871AEF7D57004D3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434037881AEF7D57004D3308 /* TEST_CommonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEST_CommonTests.m; sourceTree = "<group>"; };
-		434037931AEF7D7D004D3308 /* OneImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OneImages.xcassets; sourceTree = "<group>"; };
-		434037941AEF7D7D004D3308 /* TEST_Button.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TEST_Button.storyboard; sourceTree = "<group>"; };
-		434037951AEF7D7D004D3308 /* TEST_ButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEST_ButtonViewController.h; sourceTree = "<group>"; };
-		434037961AEF7D7D004D3308 /* TEST_ButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEST_ButtonViewController.m; sourceTree = "<group>"; };
 		434037981AEF7D7D004D3308 /* TESTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTViewController.h; sourceTree = "<group>"; };
 		434037991AEF7D7D004D3308 /* TESTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTViewController.m; sourceTree = "<group>"; };
 		4340379A1AEF7D7D004D3308 /* Two.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Two.storyboard; sourceTree = "<group>"; };
@@ -151,10 +149,9 @@
 		434037921AEF7D7D004D3308 /* One */ = {
 			isa = PBXGroup;
 			children = (
-				434037931AEF7D7D004D3308 /* OneImages.xcassets */,
-				434037941AEF7D7D004D3308 /* TEST_Button.storyboard */,
-				434037951AEF7D7D004D3308 /* TEST_ButtonViewController.h */,
-				434037961AEF7D7D004D3308 /* TEST_ButtonViewController.m */,
+				431D84AB1C7DDDAC00965CB4 /* Test.storyboard */,
+				431D84AC1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift */,
+				431D84AA1C7DDDAB00965CB4 /* TEST_Common-Bridging-Header.h */,
 			);
 			path = One;
 			sourceTree = "<group>";
@@ -255,6 +252,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TEST;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = luxiaoming;
 				TargetAttributes = {
@@ -293,10 +291,9 @@
 			files = (
 				434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */,
 				4340377D1AEF7D57004D3308 /* LaunchScreen.xib in Resources */,
-				4340379D1AEF7D7D004D3308 /* OneImages.xcassets in Resources */,
 				434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */,
-				4340379E1AEF7D7D004D3308 /* TEST_Button.storyboard in Resources */,
 				4340377A1AEF7D57004D3308 /* Images.xcassets in Resources */,
+				431D84AD1C7DDDAC00965CB4 /* Test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,12 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4340379F1AEF7D7D004D3308 /* TEST_ButtonViewController.m in Sources */,
 				43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */,
 				4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */,
 				434037721AEF7D57004D3308 /* AppDelegate.m in Sources */,
 				4340376F1AEF7D57004D3308 /* main.m in Sources */,
 				434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */,
+				431D84AE1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift in Sources */,
 				434037A01AEF7D7D004D3308 /* TESTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,11 +470,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TEST_Common/TEST_Common-prefix.pch";
 				INFOPLIST_FILE = TEST_Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TEST_Common/One/TEST_Common-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -487,11 +487,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TEST_Common/TEST_Common-prefix.pch";
 				INFOPLIST_FILE = TEST_Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TEST_Common/One/TEST_Common-Bridging-Header.h";
 			};
 			name = Release;
 		};
