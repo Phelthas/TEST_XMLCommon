@@ -12,7 +12,7 @@
 #define kFloatingViewMinimumHeight 64
 #define kFloatingViewMaximumHeight 200
 
-@interface TESTFloatingViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface TESTFloatingViewController ()<UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet TESTFloatingView *headerView;
@@ -99,31 +99,31 @@
 //    }
 //}
 
-////效果2：
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-//    if ([keyPath isEqualToString:@"contentOffset"]) {
-//        CGPoint offset = [change[NSKeyValueChangeNewKey] CGPointValue];
-//        if (offset.y <= 0 && -offset.y >= kFloatingViewMaximumHeight) {
-//            self.headerViewTopConstraint.constant = -offset.y - kFloatingViewMaximumHeight;
-//        } else if (offset.y < 0 && -offset.y < kFloatingViewMaximumHeight && -offset.y > kFloatingViewMinimumHeight) {
-//            self.headerViewTopConstraint.constant = -offset.y - kFloatingViewMaximumHeight;
-//        } else {
-//            self.headerViewTopConstraint.constant = kFloatingViewMinimumHeight - kFloatingViewMaximumHeight;
-//        }
-//    }
-//}
-
-//效果3：
+//效果2：
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"contentOffset"]) {
         CGPoint offset = [change[NSKeyValueChangeNewKey] CGPointValue];
-        if (offset.y <= 0 && -offset.y >= kFloatingViewMinimumHeight) {
-            self.headerViewHeightConstraint.constant = - offset.y;
+        if (offset.y <= 0 && -offset.y >= kFloatingViewMaximumHeight) {
+            self.headerViewTopConstraint.constant = -offset.y - kFloatingViewMaximumHeight;
+        } else if (offset.y < 0 && -offset.y < kFloatingViewMaximumHeight && -offset.y > kFloatingViewMinimumHeight) {
+            self.headerViewTopConstraint.constant = -offset.y - kFloatingViewMaximumHeight;
         } else {
-            self.headerViewHeightConstraint.constant = kFloatingViewMinimumHeight;
+            self.headerViewTopConstraint.constant = kFloatingViewMinimumHeight - kFloatingViewMaximumHeight;
         }
     }
 }
+
+////效果3：
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+//    if ([keyPath isEqualToString:@"contentOffset"]) {
+//        CGPoint offset = [change[NSKeyValueChangeNewKey] CGPointValue];
+//        if (offset.y <= 0 && -offset.y >= kFloatingViewMinimumHeight) {
+//            self.headerViewHeightConstraint.constant = - offset.y;
+//        } else {
+//            self.headerViewHeightConstraint.constant = kFloatingViewMinimumHeight;
+//        }
+//    }
+//}
 
 #pragma mark - buttonAction
 

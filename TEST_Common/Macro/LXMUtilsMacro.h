@@ -34,15 +34,18 @@
 #define LXMColor(R, G, B, A)       [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 
 #define LXMColorFromHex(hexValue) [UIColor \
-                                    colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-                                    green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
-                                    blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+                                    colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 \
+                                    green:((float)((hexValue & 0xFF00) >> 8))/255.0 \
+                                    blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
+
+//弱引用
+#define WEAKSELF(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 //调试用log
 #define IOS_DEBUG
 #ifdef  IOS_DEBUG
 #define LogMethodName NSLog(@"%s",__FUNCTION__)
-#define NSLog(string,...) NSLog(@"\n 文件名：%s \n 函数名：%s \n 代码行数：%d \n     " string, __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DLog(string,...) NSLog(@"\n 文件名：%s \n 函数名：%s \n 代码行数：%d \n     " string, __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 #define NSLogRect(rect) NSLog(@"%s x:%.4f, y:%.4f, w:%.4f, h:%.4f", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)
 #define NSLogSize(size) NSLog(@"%s w:%.4f, h:%.4f", #size, size.width, size.height)

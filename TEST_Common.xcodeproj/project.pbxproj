@@ -19,8 +19,12 @@
 		434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434ACC6A1B0CD16F00B747C2 /* TEST_Floating.storyboard */; };
 		434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434ACC6D1B0CD1A300B747C2 /* TESTFloatingViewController.m */; };
 		4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */; };
+		436A39B81D75CDAC006CA302 /* Four.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436A39B71D75CDAC006CA302 /* Four.storyboard */; };
+		436A39BB1D75CF8B006CA302 /* FourEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436A39BA1D75CF8B006CA302 /* FourEditViewController.m */; };
+		436A39BE1D75CF9E006CA302 /* FourDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436A39BD1D75CF9E006CA302 /* FourDisplayViewController.m */; };
 		43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */; };
-		5D23B99F0A25EC4BFDDDEDEE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4401F4547744F9B1F501DCDA /* libPods.a */; };
+		43CCFE581D77209500564960 /* FourTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCFE571D77209500564960 /* FourTextAttachment.m */; };
+		5AB34A03A4D66CC755C39235 /* libPods-TEST_Common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6111241834EDB39A987172 /* libPods-TEST_Common.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B4C5A2124D376639CF8D8AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1B6111241834EDB39A987172 /* libPods-TEST_Common.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TEST_Common.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431D84AA1C7DDDAB00965CB4 /* TEST_Common-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEST_Common-Bridging-Header.h"; sourceTree = "<group>"; };
 		431D84AB1C7DDDAC00965CB4 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		431D84AC1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTakePhotoViewController.swift; sourceTree = "<group>"; };
@@ -58,10 +62,17 @@
 		4357CCBE1AF0E65C00DE33AF /* UIView+XMLPanGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMLPanGesture.h"; sourceTree = "<group>"; };
 		4357CCBF1AF0E65C00DE33AF /* UIView+XMLPanGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMLPanGesture.m"; sourceTree = "<group>"; };
 		4369F2641B32AE07006037FF /* LXMUtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMUtilsMacro.h; sourceTree = "<group>"; };
+		436A39B71D75CDAC006CA302 /* Four.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Four.storyboard; sourceTree = "<group>"; };
+		436A39B91D75CF8B006CA302 /* FourEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourEditViewController.h; sourceTree = "<group>"; };
+		436A39BA1D75CF8B006CA302 /* FourEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourEditViewController.m; sourceTree = "<group>"; };
+		436A39BC1D75CF9E006CA302 /* FourDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourDisplayViewController.h; sourceTree = "<group>"; };
+		436A39BD1D75CF9E006CA302 /* FourDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourDisplayViewController.m; sourceTree = "<group>"; };
 		43B342291B12BA0C00D6844E /* TESTFloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTFloatingView.h; sourceTree = "<group>"; };
 		43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingView.m; sourceTree = "<group>"; };
-		4401F4547744F9B1F501DCDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC98623D38E3A6FA37E7E78E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		43CCFE561D77209500564960 /* FourTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourTextAttachment.h; sourceTree = "<group>"; };
+		43CCFE571D77209500564960 /* FourTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourTextAttachment.m; sourceTree = "<group>"; };
+		56949882AA3F25B0BEB2A381 /* Pods-TEST_Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEST_Common.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TEST_Common/Pods-TEST_Common.debug.xcconfig"; sourceTree = "<group>"; };
+		7042B0F7017077CF2B0ADFB7 /* Pods-TEST_Common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEST_Common.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEST_Common/Pods-TEST_Common.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D23B99F0A25EC4BFDDDEDEE /* libPods.a in Frameworks */,
+				5AB34A03A4D66CC755C39235 /* libPods-TEST_Common.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,14 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A465BE461C28F81C7E09ED1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B6111241834EDB39A987172 /* libPods-TEST_Common.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		434037601AEF7D57004D3308 = {
 			isa = PBXGroup;
 			children = (
 				4340376B1AEF7D57004D3308 /* TEST_Common */,
 				434037851AEF7D57004D3308 /* TEST_CommonTests */,
 				4340376A1AEF7D57004D3308 /* Products */,
-				70F801563D7FB6B49435612F /* Pods */,
-				82D23AA52554E3B01F2C8215 /* Frameworks */,
+				7ABBDE25112F948E871C609F /* Pods */,
+				1A465BE461C28F81C7E09ED1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,12 +125,13 @@
 		4340376B1AEF7D57004D3308 /* TEST_Common */ = {
 			isa = PBXGroup;
 			children = (
+				434037701AEF7D57004D3308 /* AppDelegate.h */,
+				434037711AEF7D57004D3308 /* AppDelegate.m */,
 				4369F2631B32ADD1006037FF /* Macro */,
 				434037921AEF7D7D004D3308 /* One */,
 				434037971AEF7D7D004D3308 /* Two */,
-				434037701AEF7D57004D3308 /* AppDelegate.h */,
-				434037711AEF7D57004D3308 /* AppDelegate.m */,
 				434ACC691B0CD15200B747C2 /* Three */,
+				436A39B61D75CD94006CA302 /* Four */,
 				434037791AEF7D57004D3308 /* Images.xcassets */,
 				4340377B1AEF7D57004D3308 /* LaunchScreen.xib */,
 				4340376C1AEF7D57004D3308 /* Supporting Files */,
@@ -188,21 +208,27 @@
 			path = Macro;
 			sourceTree = "<group>";
 		};
-		70F801563D7FB6B49435612F /* Pods */ = {
+		436A39B61D75CD94006CA302 /* Four */ = {
 			isa = PBXGroup;
 			children = (
-				BC98623D38E3A6FA37E7E78E /* Pods.debug.xcconfig */,
-				2B4C5A2124D376639CF8D8AE /* Pods.release.xcconfig */,
+				436A39B71D75CDAC006CA302 /* Four.storyboard */,
+				436A39B91D75CF8B006CA302 /* FourEditViewController.h */,
+				436A39BA1D75CF8B006CA302 /* FourEditViewController.m */,
+				436A39BC1D75CF9E006CA302 /* FourDisplayViewController.h */,
+				436A39BD1D75CF9E006CA302 /* FourDisplayViewController.m */,
+				43CCFE561D77209500564960 /* FourTextAttachment.h */,
+				43CCFE571D77209500564960 /* FourTextAttachment.m */,
 			);
-			name = Pods;
+			path = Four;
 			sourceTree = "<group>";
 		};
-		82D23AA52554E3B01F2C8215 /* Frameworks */ = {
+		7ABBDE25112F948E871C609F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4401F4547744F9B1F501DCDA /* libPods.a */,
+				56949882AA3F25B0BEB2A381 /* Pods-TEST_Common.debug.xcconfig */,
+				7042B0F7017077CF2B0ADFB7 /* Pods-TEST_Common.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,11 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4340378C1AEF7D57004D3308 /* Build configuration list for PBXNativeTarget "TEST_Common" */;
 			buildPhases = (
-				A5667A7F587453618D0B9542 /* Check Pods Manifest.lock */,
+				C81F00F80940627383EBC46E /* [CP] Check Pods Manifest.lock */,
 				434037651AEF7D57004D3308 /* Sources */,
 				434037661AEF7D57004D3308 /* Frameworks */,
 				434037671AEF7D57004D3308 /* Resources */,
-				42617E812A53E53002D76F7B /* Copy Pods Resources */,
+				66EABF20AEBDDEEC12367B86 /* [CP] Embed Pods Frameworks */,
+				320D9E253EA43CCC1E663D9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,7 +280,7 @@
 			attributes = {
 				CLASSPREFIX = TEST;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = luxiaoming;
 				TargetAttributes = {
 					434037681AEF7D57004D3308 = {
@@ -293,6 +320,7 @@
 				4340377D1AEF7D57004D3308 /* LaunchScreen.xib in Resources */,
 				434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */,
 				4340377A1AEF7D57004D3308 /* Images.xcassets in Resources */,
+				436A39B81D75CDAC006CA302 /* Four.storyboard in Resources */,
 				431D84AD1C7DDDAC00965CB4 /* Test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,29 +335,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42617E812A53E53002D76F7B /* Copy Pods Resources */ = {
+		320D9E253EA43CCC1E663D9D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEST_Common/Pods-TEST_Common-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5667A7F587453618D0B9542 /* Check Pods Manifest.lock */ = {
+		66EABF20AEBDDEEC12367B86 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEST_Common/Pods-TEST_Common-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C81F00F80940627383EBC46E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,10 +388,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */,
+				43CCFE581D77209500564960 /* FourTextAttachment.m in Sources */,
 				4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */,
 				434037721AEF7D57004D3308 /* AppDelegate.m in Sources */,
 				4340376F1AEF7D57004D3308 /* main.m in Sources */,
+				436A39BB1D75CF8B006CA302 /* FourEditViewController.m in Sources */,
 				434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */,
+				436A39BE1D75CF9E006CA302 /* FourDisplayViewController.m in Sources */,
 				431D84AE1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift in Sources */,
 				434037A01AEF7D7D004D3308 /* TESTViewController.m in Sources */,
 			);
@@ -405,6 +451,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -466,7 +513,7 @@
 		};
 		4340378D1AEF7D57004D3308 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC98623D38E3A6FA37E7E78E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 56949882AA3F25B0BEB2A381 /* Pods-TEST_Common.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -475,6 +522,7 @@
 				INFOPLIST_FILE = TEST_Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duowan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEST_Common/One/TEST_Common-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -483,7 +531,7 @@
 		};
 		4340378E1AEF7D57004D3308 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B4C5A2124D376639CF8D8AE /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7042B0F7017077CF2B0ADFB7 /* Pods-TEST_Common.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -492,6 +540,7 @@
 				INFOPLIST_FILE = TEST_Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duowan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEST_Common/One/TEST_Common-Bridging-Header.h";
 			};
@@ -511,6 +560,7 @@
 				);
 				INFOPLIST_FILE = TEST_CommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duowan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEST_Common.app/TEST_Common";
 			};
@@ -526,6 +576,7 @@
 				);
 				INFOPLIST_FILE = TEST_CommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duowan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEST_Common.app/TEST_Common";
 			};
