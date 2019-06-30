@@ -23,9 +23,9 @@ class TestTakePhotoViewController: UIViewController {
     var frontCameraDevice: AVCaptureDevice?
     var isBackCamera: Bool = true
     var previewLayer: AVCaptureVideoPreviewLayer!
-    var flashMode: AVCaptureFlashMode = AVCaptureFlashMode.auto
+    var flashMode: AVCaptureDevice.FlashMode = AVCaptureDevice.FlashMode.auto
     var authorizationStatus: AVAuthorizationStatus {
-        return AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        return AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
     }
     
     var currentCameraDevice: AVCaptureDevice? {
@@ -99,7 +99,7 @@ extension TestTakePhotoViewController {
         
         switch authorizationStatus {
         case.notDetermined:
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted: Bool) -> Void in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
                 if granted {
                     self.configureCamera()
                 } else {
@@ -114,9 +114,9 @@ extension TestTakePhotoViewController {
     }
     
     fileprivate func configureCamera() {
-        session.sessionPreset = AVCaptureSessionPresetPhoto
-        let availableCameraArray = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-        for tempDevice in availableCameraArray as! [AVCaptureDevice] {
+        session.sessionPreset = AVCaptureSession.Preset.photo
+        let availableCameraArray = AVCaptureDevice.devices(for: AVMediaType.video)
+        for tempDevice in availableCameraArray {
             if tempDevice.position == .back {
                 backCameraDevice = tempDevice
             } else if tempDevice.position == .front {
@@ -127,7 +127,7 @@ extension TestTakePhotoViewController {
         previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
         if let tempLayer = previewLayer {
             tempLayer.frame = self.takePhotoView.bounds
-            tempLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+            tempLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
             self.takePhotoView.layer.addSublayer(tempLayer)
         }
         
@@ -136,11 +136,11 @@ extension TestTakePhotoViewController {
         }
         
         do {
-            for tempInput in session.inputs as! [AVCaptureInput] { //貌似不这么先删一遍就加不进去
+            for tempInput in session.inputs { //貌似不这么先删一遍就加不进去
                 session.removeInput(tempInput)
             }
             
-            let cameraInput: AVCaptureDeviceInput = try AVCaptureDeviceInput(device: self.currentCameraDevice)
+            let cameraInput: AVCaptureDeviceInput = try AVCaptureDeviceInput(device: self.currentCameraDevice!)
             if session.canAddInput(cameraInput) {
                 session.addInput(cameraInput)
             } else {
@@ -190,19 +190,19 @@ extension TestTakePhotoViewController {
 // MARK: - Action
 extension TestTakePhotoViewController {
     
-    func image(_ image: UIImage, didFinishSavingWithError: NSError?, contextInfo: AnyObject) {
-        NSLog("error is \(didFinishSavingWithError)")
+    @objc func image(_ image: UIImage, didFinishSavingWithError: NSError?, contextInfo: AnyObject) {
+        NSLog("error is \(String(describing: didFinishSavingWithError))")
     }
 
     
     
     
     @IBAction func handleTakePhotoButtonTapped(_ sender: UIButton) {
-        let connection = self.stillImageOutput.connection(withMediaType: AVMediaTypeVideo)
+        guard let connection = self.stillImageOutput.connection(with: AVMediaType.video) else { return }
         self.stillImageOutput.captureStillImageAsynchronously(from: connection) { [unowned self] (imageDataSampleBuffer, error) -> Void in
             if error == nil {
                 // 如果使用 session .Photo 预设，或者在设备输出设置中明确进行了设置,就能获得已经压缩为JPEG的数据
-                if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer),
+                if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer!),
                     let image = UIImage(data: imageData) {
                     // 样本缓冲区也包含元数据
                     // let metadata:NSDictionary = CMCopyDictionaryOfAttachments(nil, imageDataSampleBuffer, CMAttachmentMode(kCMAttachmentMode_ShouldPropagate))!
@@ -212,7 +212,7 @@ extension TestTakePhotoViewController {
                 }
                 
             } else {
-                NSLog("error while capturing still image: \(error)")
+                NSLog("error while capturing still image: \(String(describing: error))")
             }
             
         }
@@ -254,7 +254,7 @@ extension TestTakePhotoViewController {
     @IBAction func handleChangeFocusGesture(_ sender: UITapGestureRecognizer) {
         let pointInPreview = sender.location(in: sender.view)
         if let tempLayer = self.previewLayer {
-            let pointInCamera = tempLayer.captureDevicePointOfInterest(for: pointInPreview)
+            let pointInCamera = tempLayer.captureDevicePointConverted(fromLayerPoint: pointInPreview)
             if let currentCameraDevice = currentCameraDevice {
                 try! currentCameraDevice.lockForConfiguration()
                 if currentCameraDevice.isFocusPointOfInterestSupported == true {
