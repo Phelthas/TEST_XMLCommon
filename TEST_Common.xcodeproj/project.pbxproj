@@ -22,6 +22,10 @@
 		436A39B81D75CDAC006CA302 /* Four.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436A39B71D75CDAC006CA302 /* Four.storyboard */; };
 		436A39BB1D75CF8B006CA302 /* FourEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436A39BA1D75CF8B006CA302 /* FourEditViewController.m */; };
 		436A39BE1D75CF9E006CA302 /* FourDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436A39BD1D75CF9E006CA302 /* FourDisplayViewController.m */; };
+		43949BC822D496F3000948BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43949BC722D496F3000948BA /* Main.storyboard */; };
+		43949BCB22D49741000948BA /* TESTFeatureListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BCA22D49741000948BA /* TESTFeatureListViewController.m */; };
+		43949BCE22D4976A000948BA /* TESTFeatureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BCD22D4976A000948BA /* TESTFeatureItem.m */; };
+		43949BD122D499A7000948BA /* TESTJumpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BD022D499A7000948BA /* TESTJumpManager.m */; };
 		43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */; };
 		43CCFE581D77209500564960 /* FourTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCFE571D77209500564960 /* FourTextAttachment.m */; };
 		5AB34A03A4D66CC755C39235 /* libPods-TEST_Common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6111241834EDB39A987172 /* libPods-TEST_Common.a */; };
@@ -67,6 +71,13 @@
 		436A39BA1D75CF8B006CA302 /* FourEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourEditViewController.m; sourceTree = "<group>"; };
 		436A39BC1D75CF9E006CA302 /* FourDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourDisplayViewController.h; sourceTree = "<group>"; };
 		436A39BD1D75CF9E006CA302 /* FourDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourDisplayViewController.m; sourceTree = "<group>"; };
+		43949BC722D496F3000948BA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		43949BC922D49741000948BA /* TESTFeatureListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TESTFeatureListViewController.h; sourceTree = "<group>"; };
+		43949BCA22D49741000948BA /* TESTFeatureListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTFeatureListViewController.m; sourceTree = "<group>"; };
+		43949BCC22D4976A000948BA /* TESTFeatureItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TESTFeatureItem.h; sourceTree = "<group>"; };
+		43949BCD22D4976A000948BA /* TESTFeatureItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTFeatureItem.m; sourceTree = "<group>"; };
+		43949BCF22D499A7000948BA /* TESTJumpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TESTJumpManager.h; sourceTree = "<group>"; };
+		43949BD022D499A7000948BA /* TESTJumpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTJumpManager.m; sourceTree = "<group>"; };
 		43B342291B12BA0C00D6844E /* TESTFloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTFloatingView.h; sourceTree = "<group>"; };
 		43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingView.m; sourceTree = "<group>"; };
 		43CCFE561D77209500564960 /* FourTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourTextAttachment.h; sourceTree = "<group>"; };
@@ -127,6 +138,7 @@
 			children = (
 				434037701AEF7D57004D3308 /* AppDelegate.h */,
 				434037711AEF7D57004D3308 /* AppDelegate.m */,
+				43949BC622D496DD000948BA /* Main */,
 				4369F2631B32ADD1006037FF /* Macro */,
 				434037921AEF7D7D004D3308 /* One */,
 				434037971AEF7D7D004D3308 /* Two */,
@@ -222,6 +234,20 @@
 			path = Four;
 			sourceTree = "<group>";
 		};
+		43949BC622D496DD000948BA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				43949BC722D496F3000948BA /* Main.storyboard */,
+				43949BC922D49741000948BA /* TESTFeatureListViewController.h */,
+				43949BCA22D49741000948BA /* TESTFeatureListViewController.m */,
+				43949BCC22D4976A000948BA /* TESTFeatureItem.h */,
+				43949BCD22D4976A000948BA /* TESTFeatureItem.m */,
+				43949BCF22D499A7000948BA /* TESTJumpManager.h */,
+				43949BD022D499A7000948BA /* TESTJumpManager.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		7ABBDE25112F948E871C609F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +306,7 @@
 			attributes = {
 				CLASSPREFIX = TEST;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = luxiaoming;
 				TargetAttributes = {
 					434037681AEF7D57004D3308 = {
@@ -295,7 +321,7 @@
 			};
 			buildConfigurationList = 434037641AEF7D57004D3308 /* Build configuration list for PBXProject "TEST_Common" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -317,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43949BC822D496F3000948BA /* Main.storyboard in Resources */,
 				434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */,
 				4340377D1AEF7D57004D3308 /* LaunchScreen.xib in Resources */,
 				434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */,
@@ -392,11 +419,14 @@
 				43CCFE581D77209500564960 /* FourTextAttachment.m in Sources */,
 				4357CCC01AF0E65C00DE33AF /* UIView+XMLPanGesture.m in Sources */,
 				434037721AEF7D57004D3308 /* AppDelegate.m in Sources */,
+				43949BD122D499A7000948BA /* TESTJumpManager.m in Sources */,
 				4340376F1AEF7D57004D3308 /* main.m in Sources */,
 				436A39BB1D75CF8B006CA302 /* FourEditViewController.m in Sources */,
 				434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */,
+				43949BCE22D4976A000948BA /* TESTFeatureItem.m in Sources */,
 				436A39BE1D75CF9E006CA302 /* FourDisplayViewController.m in Sources */,
 				431D84AE1C7DDDAC00965CB4 /* TestTakePhotoViewController.swift in Sources */,
+				43949BCB22D49741000948BA /* TESTFeatureListViewController.m in Sources */,
 				434037A01AEF7D7D004D3308 /* TESTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,14 +469,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -485,14 +523,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -532,7 +578,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEST_Common/One/TEST_Common-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -550,7 +596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duowan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEST_Common/One/TEST_Common-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
