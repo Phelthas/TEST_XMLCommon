@@ -21,16 +21,11 @@ static NSString * const kUITableViewCellIdentifier = @"UITableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.title = @"Demo May Cry";
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kUITableViewCellIdentifier];
     self.dataArray = [TESTFeatureItem defaultTestItems];
-    self.title = @"Demo may cry";
+    
 }
 
 #pragma mark - Table view data source

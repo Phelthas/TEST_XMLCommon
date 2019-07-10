@@ -16,6 +16,8 @@
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 @property (nonatomic, strong) AVMutableAudioMix *audioMix;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
+@property (nonatomic, strong) AVMutableComposition *composition;
+
 
 @property (nonatomic, strong) UISlider *slider1;
 @property (nonatomic, strong) UISlider *slider2;
@@ -58,8 +60,18 @@
 #pragma mark - Action
 
 - (void)handleSlider:(UISlider *)sender {
-    
     // 必须重新创建一个AVMutableAudioMix，否则不会生效
+    
+    
+    
+    /*
+     注意：audioMix.inputParameters属性关键字是copy！！！
+     所以直接调用self.audioMix.inputParameters[0]修改音量是不会生效的!
+     必须要重新生成AVMutableAudioMixInputParameters才行,
+     可以用mutableCopy复制一个，也可以拿到原来的track重新生成一个
+     */
+    
+    // 方法1
     AVMutableAudioMix *audioMix = [AVMutableAudioMix audioMix];
     AVMutableAudioMixInputParameters *parameters1 = [[self.audioMix.inputParameters objectAtIndex:0] mutableCopy];
     [parameters1 setVolume:self.slider1.value atTime:kCMTimeZero];
@@ -69,6 +81,19 @@
     
     audioMix.inputParameters = @[parameters1, parameters2];
     self.playerItem.audioMix = audioMix;
+     
+    
+    
+    // 方法2
+//    AVMutableAudioMix *audioMix = [AVMutableAudioMix audioMix];
+//    NSArray<AVAssetTrack *> *audioAssetTrackArray = [self.composition tracksWithMediaType:AVMediaTypeAudio];
+//    AVMutableAudioMixInputParameters *parameters1 = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:[audioAssetTrackArray objectAtIndex:0]];
+//    [parameters1 setVolume:self.slider1.value atTime:kCMTimeZero];
+//
+//    AVMutableAudioMixInputParameters *parameters2 = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:[audioAssetTrackArray objectAtIndex:1]];
+//    [parameters2 setVolume:self.slider2.value atTime:kCMTimeZero];
+//    audioMix.inputParameters = @[parameters1, parameters2];
+//    self.playerItem.audioMix = audioMix;
     
 }
 
@@ -96,9 +121,12 @@
     
     AVMutableCompositionTrack *audioCompositionTrack2 = [composition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
     [audioCompositionTrack2 insertTimeRange:CMTimeRangeMake(kCMTimeZero, audioAsset.duration) ofTrack:audioTrack2 atTime:kCMTimeZero error:nil];
+    self.composition = composition;
     
     
     AVMutableAudioMix *audioMix = [AVMutableAudioMix audioMix];
+    
+    // 注意：这里必须要用audioCompositionTrack1而不能用audioTrack1，否则会因为trackId不一致而不生效
     AVMutableAudioMixInputParameters *inputParameters1 = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:audioCompositionTrack1];
     [inputParameters1 setVolume:1 atTime:kCMTimeZero];
     
@@ -106,6 +134,10 @@
     [inputParameters2 setVolume:1 atTime:kCMTimeZero];
     audioMix.inputParameters = @[inputParameters1, inputParameters2];
     self.audioMix = audioMix;
+    
+    // videoComposition在这个场景下是没有必要的
+//    AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoCompositionWithPropertiesOfAsset:composition];
+    
     
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:composition];
     playerItem.audioMix = audioMix;
