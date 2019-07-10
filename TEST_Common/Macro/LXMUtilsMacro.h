@@ -15,6 +15,8 @@
 #define kLXMApplication          [UIApplication sharedApplication]
 
 
+#define kLXMScreenBounds            [[UIScreen mainScreen] bounds]
+#define kLXMScreenSize              [[UIScreen mainScreen] bounds].size
 #define kLXMScreenHeight            [[UIScreen mainScreen] bounds].size.height
 #define kLXMScreenWidth             [[UIScreen mainScreen] bounds].size.width
 
@@ -25,10 +27,20 @@
 #define is5_5Inch CGSizeEqualToSize([UIScreen mainScreen].currentMode.size, CGSizeMake(1242, 2208))
 
 //判读运行模式，判读程序运行时实际的“点”，iPad运行iPhone程序也可以用这个
-#define is320_480 CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(320, 480))
-#define is320_568 CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(320, 568))
-#define is375_667 CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375, 667))
-#define is414_736 CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(414, 736))
+#define is320_480 CGSizeEqualToSize(kLXMScreenSize, CGSizeMake(320, 480))
+#define is320_568 CGSizeEqualToSize(kLXMScreenSize, CGSizeMake(320, 568))
+#define is375_667 CGSizeEqualToSize(kLXMScreenSize, CGSizeMake(375, 667))
+#define is414_736 CGSizeEqualToSize(kLXMScreenSize, CGSizeMake(414, 736))
+#define is375_812 CGSizeEqualToSize(kLXMScreenSize, CGSizeMake(375, 812))
+#define is414_896 CGSizeEqualToSize(kLXMScreenSize, CGSizeMake(414, 896))
+
+#define isiPhoneXSerial (is375_812 || is414_896)
+
+#define kLXMNavigationBarHeight         (isiPhoneXSerial ? 88 : 64)
+#define kLXMStatusBarHeight             (isiPhoneXSerial ? 44 : 20)
+#define kLXMTabBarBarHeight             (isiPhoneXSerial ? 83 : 49)
+#define kLXMBottomMarginHeight          (isiPhoneXSerial ? 34 : 0)
+
 
 //颜色相关
 #define LXMColor(R, G, B, A)       [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]

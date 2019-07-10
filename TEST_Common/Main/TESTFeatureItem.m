@@ -7,6 +7,8 @@
 //
 
 #import "TESTFeatureItem.h"
+#import "TESTJumpManager.h"
+#import "TESTAudioMixViewController.h"
 
 
 @implementation TESTFeatureItem
@@ -17,7 +19,8 @@
     TESTFeatureItem *one = [[TESTFeatureItem alloc] init];
     one.title = @"Test AVAudioMix";
     [one setAction:^{
-        
+        TESTAudioMixViewController *viewController = [[TESTAudioMixViewController alloc] init];
+        [TESTJumpManager jumpToViewController:viewController inNav:nil];
     }];
     
     return @[one];

@@ -26,6 +26,9 @@
 		43949BCB22D49741000948BA /* TESTFeatureListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BCA22D49741000948BA /* TESTFeatureListViewController.m */; };
 		43949BCE22D4976A000948BA /* TESTFeatureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BCD22D4976A000948BA /* TESTFeatureItem.m */; };
 		43949BD122D499A7000948BA /* TESTJumpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BD022D499A7000948BA /* TESTJumpManager.m */; };
+		43949BD522D4BA3D000948BA /* TESTAudioMixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949BD422D4BA3D000948BA /* TESTAudioMixViewController.m */; };
+		4399FBF122D58DBC00A97E7D /* testMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4399FBEF22D58DBC00A97E7D /* testMusic.mp3 */; };
+		4399FBF222D58DBC00A97E7D /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4399FBF022D58DBC00A97E7D /* testVideo.mp4 */; };
 		43B3422B1B12BA0C00D6844E /* TESTFloatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */; };
 		43CCFE581D77209500564960 /* FourTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCFE571D77209500564960 /* FourTextAttachment.m */; };
 		5AB34A03A4D66CC755C39235 /* libPods-TEST_Common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6111241834EDB39A987172 /* libPods-TEST_Common.a */; };
@@ -78,6 +81,10 @@
 		43949BCD22D4976A000948BA /* TESTFeatureItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTFeatureItem.m; sourceTree = "<group>"; };
 		43949BCF22D499A7000948BA /* TESTJumpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TESTJumpManager.h; sourceTree = "<group>"; };
 		43949BD022D499A7000948BA /* TESTJumpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTJumpManager.m; sourceTree = "<group>"; };
+		43949BD322D4BA3D000948BA /* TESTAudioMixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TESTAudioMixViewController.h; sourceTree = "<group>"; };
+		43949BD422D4BA3D000948BA /* TESTAudioMixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTAudioMixViewController.m; sourceTree = "<group>"; };
+		4399FBEF22D58DBC00A97E7D /* testMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testMusic.mp3; sourceTree = "<group>"; };
+		4399FBF022D58DBC00A97E7D /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		43B342291B12BA0C00D6844E /* TESTFloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TESTFloatingView.h; sourceTree = "<group>"; };
 		43B3422A1B12BA0C00D6844E /* TESTFloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TESTFloatingView.m; sourceTree = "<group>"; };
 		43CCFE561D77209500564960 /* FourTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourTextAttachment.h; sourceTree = "<group>"; };
@@ -139,6 +146,7 @@
 				434037701AEF7D57004D3308 /* AppDelegate.h */,
 				434037711AEF7D57004D3308 /* AppDelegate.m */,
 				43949BC622D496DD000948BA /* Main */,
+				43949BD222D4BA20000948BA /* AudioMix */,
 				4369F2631B32ADD1006037FF /* Macro */,
 				434037921AEF7D7D004D3308 /* One */,
 				434037971AEF7D7D004D3308 /* Two */,
@@ -248,6 +256,17 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		43949BD222D4BA20000948BA /* AudioMix */ = {
+			isa = PBXGroup;
+			children = (
+				43949BD322D4BA3D000948BA /* TESTAudioMixViewController.h */,
+				43949BD422D4BA3D000948BA /* TESTAudioMixViewController.m */,
+				4399FBEF22D58DBC00A97E7D /* testMusic.mp3 */,
+				4399FBF022D58DBC00A97E7D /* testVideo.mp4 */,
+			);
+			path = AudioMix;
+			sourceTree = "<group>";
+		};
 		7ABBDE25112F948E871C609F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,11 +363,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				43949BC822D496F3000948BA /* Main.storyboard in Resources */,
+				4399FBF222D58DBC00A97E7D /* testVideo.mp4 in Resources */,
 				434ACC6B1B0CD16F00B747C2 /* TEST_Floating.storyboard in Resources */,
 				4340377D1AEF7D57004D3308 /* LaunchScreen.xib in Resources */,
 				434037A11AEF7D7D004D3308 /* Two.storyboard in Resources */,
 				4340377A1AEF7D57004D3308 /* Images.xcassets in Resources */,
 				436A39B81D75CDAC006CA302 /* Four.storyboard in Resources */,
+				4399FBF122D58DBC00A97E7D /* testMusic.mp3 in Resources */,
 				431D84AD1C7DDDAC00965CB4 /* Test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +442,7 @@
 				434037721AEF7D57004D3308 /* AppDelegate.m in Sources */,
 				43949BD122D499A7000948BA /* TESTJumpManager.m in Sources */,
 				4340376F1AEF7D57004D3308 /* main.m in Sources */,
+				43949BD522D4BA3D000948BA /* TESTAudioMixViewController.m in Sources */,
 				436A39BB1D75CF8B006CA302 /* FourEditViewController.m in Sources */,
 				434ACC6E1B0CD1A300B747C2 /* TESTFloatingViewController.m in Sources */,
 				43949BCE22D4976A000948BA /* TESTFeatureItem.m in Sources */,
