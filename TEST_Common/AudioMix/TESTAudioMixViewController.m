@@ -55,6 +55,16 @@
     [self.view addSubview:slider2];
     self.slider2 = slider2;
     
+    
+    UIButton *exportButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 250, 100, 100)];
+    [exportButton setTitle:@"export" forState:UIControlStateNormal];
+    exportButton.backgroundColor = UIColor.orangeColor;
+    [self.view addSubview:exportButton];
+    WEAKSELF(weakSelf)
+    [exportButton addButtonCallback:^(UIButton *sender) {
+        [weakSelf exportWithAudioMix];
+    }];
+    
 }
 
 #pragma mark - Action
@@ -95,6 +105,31 @@
 //    audioMix.inputParameters = @[parameters1, parameters2];
 //    self.playerItem.audioMix = audioMix;
     
+}
+
+
+/**
+ 导出后，多个音轨会合并成一个
+ */
+- (void)exportWithAudioMix {
+    
+    NSString *userCacheDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+    NSString *outputURLString = [NSString stringWithFormat:@"%@/audioMixOutput.mp4", userCacheDirectory];
+    NSLog(outputURLString);
+    [kLXMFileManager removeItemAtPath:outputURLString error:nil];
+    
+    AVAssetExportSession *exportSession = [AVAssetExportSession exportSessionWithAsset:self.composition presetName:AVAssetExportPresetHighestQuality];
+    exportSession.outputFileType = AVFileTypeMPEG4;
+    exportSession.outputURL = [NSURL fileURLWithPath:outputURLString];
+    exportSession.shouldOptimizeForNetworkUse = YES;
+    exportSession.audioMix = self.audioMix;
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+            NSLog(@"export success");
+        } else {
+            NSLog(@"export failed: %@", exportSession.error);
+        }
+    }];
 }
 
 - (void)testAudioMix {
