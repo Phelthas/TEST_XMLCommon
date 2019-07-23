@@ -191,7 +191,9 @@ extension TestTakePhotoViewController {
 extension TestTakePhotoViewController {
     
     @objc func image(_ image: UIImage, didFinishSavingWithError: NSError?, contextInfo: AnyObject) {
+
         NSLog("error is \(String(describing: didFinishSavingWithError))")
+
     }
 
     
@@ -202,7 +204,9 @@ extension TestTakePhotoViewController {
         self.stillImageOutput.captureStillImageAsynchronously(from: connection) { [unowned self] (imageDataSampleBuffer, error) -> Void in
             if error == nil {
                 // 如果使用 session .Photo 预设，或者在设备输出设置中明确进行了设置,就能获得已经压缩为JPEG的数据
-                if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer!),
+
+                if let imageDataSampleBuffer = imageDataSampleBuffer,
+                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer),
                     let image = UIImage(data: imageData) {
                     // 样本缓冲区也包含元数据
                     // let metadata:NSDictionary = CMCopyDictionaryOfAttachments(nil, imageDataSampleBuffer, CMAttachmentMode(kCMAttachmentMode_ShouldPropagate))!

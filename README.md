@@ -8,5 +8,9 @@ three 是实现悬浮+视差效果的headerView的一个巧妙方法的demo；
 
 four 是用NSAtrtibutedString实现的一个简单的图文混排的demo（低仿知乎输入框）
 
-切换one，two，three 只需要在target-General-MainInterface 处设置对应的storyboard即可
+切换one，two，three 只需要在target-General-MainInterface 处设置对应的storyboard即可    
+
+*****************
+### Main是音视频处理相关的Demo，主要是AVFoundation相关
+* AudioMix：使用AVAudioMix实时修改多个音轨的音量
 
